@@ -1,5 +1,5 @@
 <?php
-	require_once "index.logic.php";
+	require_once "index_logic.php";
 	include "../common/header.php";
 ?>
 	<h1>Patiënts</h1>

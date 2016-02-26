@@ -1,5 +1,5 @@
 <?php
-	require_once "create.logic.php";
+	require_once "create_logic.php";
 	include "../common/header.php";
 ?>
 	<h1>New patiënt</h1>

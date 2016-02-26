@@ -9,8 +9,6 @@
 			<tr>
 				<th>id</th>
 				<th>name</th>
-				<th>species</th>
-				<th>status</th>
 				<th>edit</th>
 				<th>delete</th>
 			</tr>
@@ -23,8 +21,6 @@
 			<tr>
 				<td><?=$client['id'] ?></td>
 				<td><?=$client['name'] ?></td>
-				<td><?=$client['species'] ?></td>
-				<td><?=$client['status'] ?></td>
 				<td class="center"><a href="edit.php?id=<?=$client['id']?>">edit</a></td>
 				<td class="center"><a href="delete.php?id=<?=$client['id']?>">delete</a></td>
 			</tr>

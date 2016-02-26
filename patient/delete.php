@@ -1,5 +1,5 @@
 <?php
-	require_once "delete.logic.php";
+	require_once "delete_logic.php";
 	include "../common/header.php";
 ?>
 	<h1>Delete patiënt</h1>

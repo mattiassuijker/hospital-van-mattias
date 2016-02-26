@@ -1,5 +1,5 @@
 <?php
-	require_once "edit.logic.php";
+	require_once "edit_logic.php";
 	include "../common/header.php";
 ?>
 	<h1>Edit patiënt</h1>
