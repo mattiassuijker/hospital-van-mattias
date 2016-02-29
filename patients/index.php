@@ -7,7 +7,6 @@
 	<table>
 		<thead>	
 			<tr>
-				<th>id</th>
 				<th>name</th>
 				<th>species</th>
 				<th>product</th>
@@ -20,7 +19,6 @@
 	foreach($patients as $patient):
 ?>
 			<tr>
-				<td><?=$patient['id']?></td>
 				<td><?=$patient['name']?></td>
 				<td><?=$patient['species']?></td>
 				<td><?=$patient['status']?></td>

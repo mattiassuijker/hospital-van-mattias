@@ -27,10 +27,11 @@
 		// Prepare query and execute
 		$query = "UPDATE species SET name='$name', WHERE id=$id";
 		$result = $db->query($query);
+
+		var_dump($query)
 	
     // Tell the browser to go back to the index page.
-    header("Location: ./");
-    exit();
-	endif;
-
+		header("Location: ./");
+    	exit();
+		endif;
 ?>

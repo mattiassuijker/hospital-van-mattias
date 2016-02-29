@@ -2,7 +2,6 @@
 	include "../common/header.php";
 ?>
 	<h1>Hospital</h1>
-	<h2>oke</h2>
 	<ul>
 		<li><a href="../patients/index.php">Patiënts</a></li>
 		<li><a href="../clients/index.php">Clients</a></li>
