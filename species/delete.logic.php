@@ -1,8 +1,8 @@
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "GET"):
-		$species = NULL;
+		$speciess = NULL;
 		if (isset($_GET['id'])):
-			// Get species for id
+			// Get speciess for id
 			$db = new mysqli('localhost','root','','hospital');
 			$id = $db->escape_string($_GET["id"]);
 			
@@ -12,25 +12,26 @@
 			$species = $result->fetch_assoc();		
 		endif;
 		if ($species == NULL):
-			// No species found
+			// No speciess found
 			http_response_code(404);
 			include("../common/not_found.php");
 			exit();
 		endif;
 	elseif ($_SERVER["REQUEST_METHOD"] == "POST"):
-		$db = new mysqli('localhost','root','','hospital');
+		if (isset($_POST['confirmed'])):
+			$db = new mysqli('localhost','root','','hospital');
 		
-		// Prepare data for update
-		$id = $db->escape_string($_POST["id"]);  
-		$name = $db->escape_string($_POST["name"]);
-
-		// Prepare query and execute
-		$query = "UPDATE species SET name='$name', WHERE id=$id";
-		$result = $db->query($query);
+			// Prepare data for delete
+			$id = $db->escape_string($_POST["id"]);
 	
-    // Tell the browser to go back to the index page.
-    header("Location: ./");
-    exit();
+			// Prepare query and execute
+			$query = "DELETE FROM species WHERE id=$id";
+			$result = $db->query($query);
+		endif;
+		
+		// Tell the browser to go back to the index page.
+		header("Location: ./");
+		exit();
 	endif;
 
 ?>

@@ -14,6 +14,15 @@
  				<input type="text" id="name" name="name">
  			</section>
 
+			<section>
+ 				<label for="name">status</label>
+ 				<input id="status" name="status">
+ 			</section>
+			
+			<section>
+ 				<label for="name">species:</label>
+ 				<input type="text" id="species" name="products">
+ 			</section>
 
  			<section>
  				<label></label>
