@@ -5,9 +5,9 @@
 	<h1>Edit specie</h1>
 	<form method="post">
 		<div>
-			<input type="hidden" name="id" value="<?=$species['id']?>">
+			<input type="hidden" name="id" value="<?=$specie['id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" value="<?=$species['name']?>">
+			<input type="text" id="name" name="name" value="<?=$specie['name']?>">
 		</div>
 		<div>
 			<label></label>

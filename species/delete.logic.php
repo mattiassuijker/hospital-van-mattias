@@ -1,6 +1,6 @@
 <?php
 	if ($_SERVER["REQUEST_METHOD"] == "GET"):
-		$speciess = NULL;
+		$species = NULL;
 		if (isset($_GET['id'])):
 			// Get speciess for id
 			$db = new mysqli('localhost','root','','hospital');
@@ -9,9 +9,9 @@
 			$query = "SELECT * FROM species WHERE id=$id";
 			$result = $db->query($query);
 		
-			$species = $result->fetch_assoc();		
+			$specie = $result->fetch_assoc();		
 		endif;
-		if ($species == NULL):
+		if ($specie == NULL):
 			// No speciess found
 			http_response_code(404);
 			include("../common/not_found.php");

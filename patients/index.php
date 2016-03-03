@@ -9,7 +9,7 @@
 			<tr>
 				<th>name</th>
 				<th>species</th>
-				<th>product</th>
+				<th>status</th>
 				<th>edit</th>
 				<th>delete</th>
 			</tr>

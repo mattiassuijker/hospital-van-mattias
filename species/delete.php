@@ -6,12 +6,11 @@
 	<p>Are you sure you want to delete:</p>
 	<form method="post">
 		<div>
-			<input type="hidden" name="id" value="<?=$speciess['id']?>">
+			<input type="hidden" name="id" value="<?=$specie['id']?>">
+			<label for="name">Name:</label>
+			<span><?=$specie['name']?></span>
 		</div>
-		<div>
-			<label for="name">name:</label>
-			<span><?=$species['name']?></span>
-		</div>
+
 		<div>
 			<label></label>
 			<input type="submit" name="confirmed" value="Yes">
