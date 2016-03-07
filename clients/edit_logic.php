@@ -23,11 +23,9 @@
 		// Prepare data for update
 		$id = $database->escape_string($_POST["id"]);
 		$name = $database->escape_string($_POST["name"]);
-		$species = $database->escape_string($_POST["species"]);
-		$status = $database->escape_string($_POST["status"]);
 		
 		// Prepare query and execute
-		$query = "UPDATE client SET name='$name', species='$species', status='$status' WHERE id=$id";
+		$query = "UPDATE client SET name='$name' WHERE id=$id";
 		$result = $database->query($query);
 	
     // Tell the browser to go back to the index page.

@@ -9,14 +9,6 @@
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name" value="<?=$client['name']?>">
 		</div>
-		<div>
-			<label for="name">species:</label>
-			<input type="text" id="species" name="species" value="<?=$client['species']?>">
-		</div>
-		<div>
-			<label for="name">status:</label>
-			<textarea type="text" id="status" name="status" value="<?=$client['status']?>"><?php echo $client['status'];?></textarea>
-		</div>
 		
 		<div>
 			<label></label>

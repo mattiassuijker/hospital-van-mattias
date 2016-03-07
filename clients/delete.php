@@ -2,7 +2,7 @@
 	require_once "delete_logic.php";
 	include "../common/header.php";
 ?>
-	<h1>Delete patiënt</h1>
+	<h1>Delete Client</h1>
 	<p>Are you sure you want to delete:</p>
 
 	<form method="post">
@@ -16,15 +16,6 @@
 			<span><?=$client['name']?></span>
 		</div>
 		
-		<div>
-			<label for="name">status:</label>
-			<span><?=$client['status']?></span>
-		</div>
-
-		<div>
-			<label for="name">species:</label>
-			<span><?=$client['species']?></span>
-		</div>
 		
 		<div>
 			<label></label>

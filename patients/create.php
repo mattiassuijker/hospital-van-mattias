@@ -8,13 +8,6 @@
 			<label for="name">Name:</label>
 			<input type="text" id="name" name="name">
 		</div>
-			<label for="name">Species:</label>
-			<input type="text" id="species" name="species">
-		</div>
-		<div>
-			<label for="name">status:</label>
-			<textarea id="status" name="status"></textarea>
-		</div>
 		<div>
 			<label></label>
 			<input type="submit" value="Save">
