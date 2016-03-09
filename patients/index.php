@@ -2,7 +2,6 @@
 	require_once "index.logic.php";
 	include "../common/header.php";
 
-var_dump($patient2)
 ?>
 	<h1>Patiënts</h1>
 	<p class="options"><a href="create.php">create</a></p>
@@ -18,6 +17,8 @@ var_dump($patient2)
 		</thead>
 		</tbody>
 <?php
+
+	var_dump($patient2)
 	foreach($patients as $patient):
 ?>
 			<tr>

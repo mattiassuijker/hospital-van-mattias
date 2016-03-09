@@ -8,7 +8,7 @@
 	$query2 = "SELECT client.name, patient.id
 	FROM client
 	INNER JOIN patient
-	ON client.clientid patient.clientid
+	ON client.id patient.clientid
 	ORDER BY client.name";
 	$result2 = $db->query($query2);
 	$patients2 = $result2->fetch_all(MYSQLI_ASSOC);
