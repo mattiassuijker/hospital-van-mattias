@@ -5,42 +5,52 @@
 			// Get Patient for id
 			$db = new mysqli('localhost','root','','hospital');
 			$id = $db->escape_string($_GET["id"]);
+
+			$speciesQuery = "SELECT * FROM species ";
+			$clientsQuery = "SELECT * FROM client ";
+			$patientsQuery = "SELECT * FROM patient WHERE id=$id";
 			
-			$query = "SELECT patient.name, patient.status, client.id, species.id, patient.id,species.name AS namespecies, client.name AS nameclient
-					FROM patient 
-					INNER JOIN species
-					ON species.id = patient.speciesid
-					INNER JOIN client
-					ON client.id = patient.clientid
-					WHERE patient.id=$id
-					";
-			$result = $db->query($query);
-		
-			$patient = $result->fetch_assoc();
-			$query = "SELECT client.id, client.name, species.id AS idspecies, species.name AS namespecies
-						FROM client
-						INNER JOIN ";
-			$result = $db -> query($query);
-			$rows = $result -> fetch_all(MYSQLI_ASSOC);
-			var_dump($patient);
+			$speciesResult = $db->query($speciesQuery);
+			$clientsResult = $db->query($clientsQuery);
+			$patientsResult = $db->query($patientsQuery);
+
+			$species = $speciesResult->fetch_all(MYSQLI_ASSOC);
+			$clients = $clientsResult->fetch_all(MYSQLI_ASSOC);
+			$patient = $patientsResult->fetch_assoc();
 
 		endif;
+
 		if ($patient == NULL):
 			// No patient found
 			http_response_code(404);
 			include("../common/not_found.php");
 			exit();
 		endif;
+
 	elseif ($_SERVER["REQUEST_METHOD"] == "POST"):
 		$db = new mysqli('localhost','root','','hospital');
 		
 		// Prepare data for update
-		$id = $db->escape_string($_POST["id"]);
+		$id = $db->escape_string($_GET["id"]);
 		$name = $db->escape_string($_POST["name"]);
+		$status = $db->escape_string($_POST["status"]);
+		$speciesid = $db->escape_string($_POST["species"]);
+		$clientid = $db->escape_string($_POST["client"]);
+		var_dump($speciesid);
+		var_dump($clientid);
+
+		
+
+		var_dump($id);
+		var_dump($name);
 
 		// Prepare query and execute
-		$query = "UPDATE patient SET name='$name' WHERE id=$id";
+		$query = "UPDATE patient 
+		SET name='$name', clientid='$clientid' ,speciesid='$speciesid' ,status='status'
+		WHERE id=$id";
+
 		$result = $db->query($query);
+		var_dump($result);
 	
     // Tell the browser to go back to the index page.
     header("Location: ./");

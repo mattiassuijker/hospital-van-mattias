@@ -12,5 +12,5 @@
 	ON client.id = patient.clientid");
 
 	$patients = $result->fetch_all(MYSQLI_ASSOC);
-	var_dump($patients);
+	
 	

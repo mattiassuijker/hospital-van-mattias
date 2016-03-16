@@ -5,31 +5,28 @@
 	<h1>Edit patiënt</h1>
 	<form method="post">
 		<div>
-			<input type="hidden" name="id" value="<?=$patient['id']?>">
 			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" value="<?=$patient['name']?>">
-		</div>
-		<select name="client">
-			<?foreach ($rows as $row) {
-				echo "<option value=$row[id]>$row[name]</option>"
-			?>
-  			
-  			
-		</select>
-Try it Yourself »
-
-		<div>
-			<label for="name">Client:</label>
-			<input type="text" id="client" name="client" value="<?=$patient['nameclient']?>">
+			<input type="text" id="name" name="name">
 		</div>
 		<div>
-			<label for="name">Species:</label>
-			<input type="text" id="species" name="species" value="<?=$patient['namespecies']?>">
+			<label for="status">Status:</label>
+			<input type="text" id="status" name="status">
 		</div>
 		<div>
-			<label for="name">Status:</label>
-			<input type="text" id="status" name="status" value="<?=$patient['status']?>">
+			<label for="species">Species:</label>
+			<select name="species" id="species">
+				<?php foreach ($species as $specie) { ?>
+				<option value=<?php echo $specie['id'];?>><?php echo $specie['name'];?></option>
+				<?php } ?>
+			</select>
 		</div>
+		<div>
+			<label for="client">Client:</label>
+			<select name="client" id="client">
+				<?php foreach ($clients as $client) {?>
+				<option value=<?php echo $client['id'];?>><?php echo $client['name'];?></option>
+				<?php }?>
+			</select>
 		</div>
 
 		<div>

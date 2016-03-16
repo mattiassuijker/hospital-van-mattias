@@ -1,0 +1,8 @@
+$query = "SELECT patient.name, patient.status, client.id, species.id, patient.id,species.name AS namespecies, client.name AS nameclient
+					FROM patient 
+					INNER JOIN species
+					ON species.id = patient.speciesid
+					INNER JOIN client
+					ON client.id = patient.clientid
+					WHERE patient.id=$id
+					";
