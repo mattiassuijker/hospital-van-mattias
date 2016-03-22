@@ -9,9 +9,9 @@
 		<thead>	
 			<tr>
 				<th>name</th>
-				<th>client</th>
-				<th>specie</th>
 				<th>status</th>
+				<th>specie</th>
+				<th>client</th>
 				<th>edit</th>
 				<th>delete</th>
 			</tr>
@@ -22,9 +22,9 @@
 ?>
 			<tr>
 				<td><?=$patient['name']?></td>
-				<td><?=$patient['nameclient']?></td>
-				<td><?=$patient['namespecies']?></td>
 				<td><?=$patient['status']?></td>
+				<td><?=$patient['namespecies']?></td>
+				<td><?=$patient['nameclient']?></td>
 				<td class="center"><a href="edit.php?id=<?=$patient['id']?>">edit</a></td>
 				<td class="center"><a href="delete.php?id=<?=$patient['id']?>">delete</a></td>
 			</tr>

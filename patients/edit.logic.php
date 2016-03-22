@@ -46,7 +46,7 @@
 
 		// Prepare query and execute
 		$query = "UPDATE patient 
-		SET name='$name', clientid='$clientid' ,speciesid='$speciesid' ,status='status'
+		SET name='$name' , clientid='$clientid' ,speciesid='$speciesid' ,status='$status'
 		WHERE id=$id";
 
 		$result = $db->query($query);

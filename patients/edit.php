@@ -27,8 +27,8 @@
 				<option value=<?php echo $client['id'];?>><?php echo $client['name'];?></option>
 				<?php }?>
 			</select>
-		</div>
 
+		</div>
 		<div>
 			<label></label>
 			<input type="submit" value="Save">
