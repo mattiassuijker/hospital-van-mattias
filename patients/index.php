@@ -8,10 +8,10 @@
 	<table>
 		<thead>	
 			<tr>
-				<th>name</th>
+				<th><a href="index.php?column=name&sort=<?= $displaysort; ?>">name</a></th>
 				<th>status</th>
-				<th>specie</th>
-				<th>client</th>
+				<th><a href="index.php?column=species&sort=<?= $displaysort; ?>">species</a></th>
+				<th><a href="index.php?column=client&sort=<?= $displaysort; ?>">client</a></th>
 				<th>edit</th>
 				<th>delete</th>
 			</tr>
@@ -23,8 +23,8 @@
 			<tr>
 				<td><?=$patient['name']?></td>
 				<td><?=$patient['status']?></td>
-				<td><?=$patient['namespecies']?></td>
-				<td><?=$patient['nameclient']?></td>
+				<td><?=$patient['species']?></td>
+				<td><?=$patient['client']?></td>
 				<td class="center"><a href="edit.php?id=<?=$patient['id']?>">edit</a></td>
 				<td class="center"><a href="delete.php?id=<?=$patient['id']?>">delete</a></td>
 			</tr>
