@@ -34,6 +34,7 @@
 		$id = $db->escape_string($_GET["id"]);
 		$name = $db->escape_string($_POST["name"]);
 		$status = $db->escape_string($_POST["status"]);
+		$gender = $db->escape_string($_POST["gender"]);
 		$speciesid = $db->escape_string($_POST["species"]);
 		$clientid = $db->escape_string($_POST["client"]);
 		var_dump($speciesid);
@@ -46,11 +47,11 @@
 
 		// Prepare query and execute
 		$query = "UPDATE patient 
-		SET name='$name' , clientid='$clientid' ,speciesid='$speciesid' ,status='$status'
+		SET name='$name' ,clientid='$clientid' ,speciesid='$speciesid' ,status='$status' ,gender='$gender' 
 		WHERE id=$id";
 
 		$result = $db->query($query);
-		var_dump($result);
+		var_dump($query);
 	
     // Tell the browser to go back to the index page.
     header("Location: ./");

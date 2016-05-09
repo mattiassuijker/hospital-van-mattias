@@ -14,12 +14,20 @@
 			<input type="text" id="status" name="status">
 		</div>
 		<div>
+			<label for="name">gender:</label><br>
+			<label for="name">male</label>
+			<input type="radio" name="gender" value="male"><br>
+			<label for="name">Female</label>
+  			<input type="radio" name="gender" value="female"><br>
+  		</div>
+		<div>
 			<label for="species">Species:</label>
 			<select name="species" id="species">
 				<?php foreach ($species as $specie) { ?>
 				<option value=<?php echo $specie['id'];?>><?php echo $specie['name'];?></option>
 				<?php } ?>
 			</select>
+			
 		</div>
 		<div>
 			<label for="client">Client:</label>
@@ -29,6 +37,7 @@
 				<?php }?>
 			</select>
 		</div>
+ 			
 		<div>
 			<label></label>
 			<input type="submit" value="Save">

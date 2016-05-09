@@ -7,13 +7,16 @@
 		// Prepare data for insertion
 		$name = $db->escape_string($_POST["name"]);
 		$status = $db->escape_string($_POST["status"]);
+		$gender = $db->escape_string($_POST["gender"]);
 		$clientid = $db->escape_string($_POST["client"]);
 		$speciesid = $db->escape_string($_POST["species"]);
+
 		
 		
 		// Prepare query and execute
-		$query = "INSERT into	patient (name, status,clientid ,speciesid) values ('$name', '$status', '$clientid', '$speciesid')";
-		$result = $db->query($query);
+		$query = "INSERT INTO patient (name, gender, status, clientid, speciesid) VALUES ('$name' ,'$gender', '$status' ,$clientid ,$speciesid)";
+		$result = $db->query($query);                          
+		echo $query;
 		
 
 	

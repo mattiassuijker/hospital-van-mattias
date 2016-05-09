@@ -14,6 +14,17 @@
 			<input type="text" id="status" name="status" value="<?=$patient['status']?>">
 		</div>
 		<div>
+			<label for="name">gender:</label><br>
+			<label for="name">male</label>
+			<input type="radio" name="gender" value="male" <?php if ($patient['gender'] == 'male') {
+				echo'checked';
+			}?>><br>
+			<label for="name">Female</label>
+  			<input type="radio" name="gender" value="female" <?php if ($patient['gender'] == 'female') {
+				echo'checked';
+			}?>><br>
+  		</div>
+		<div>
 			<label for="species">Species:</label>
 			<select name="species" id="species">
 				<?php foreach ($species as $specie) { 

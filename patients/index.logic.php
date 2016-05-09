@@ -7,12 +7,13 @@
 	$displaysort = isset($sort) && $sort == "asc" ? "desc" : "asc"; 
 	$columnsort = $column && $sort ? "ORDER BY " . $column . " " . $sort : "";
 
-	$query = "SELECT patient.name, patient.status, patient.id,species.name AS species, client.name AS client
+	$query = "SELECT patient.name, patient.status, patient.gender, patient.id,species.name AS species, client.name AS client
 	FROM patient
 	INNER JOIN species
 	ON species.id = patient.speciesid
 	INNER JOIN client
 	ON client.id = patient.clientid " . $columnsort;
+	
 
 
 	$result = $db->query($query);
